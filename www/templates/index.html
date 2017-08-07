@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <title>通讯录</title>
+    <link rel="stylesheet" type="text/css" href="static/stylesheets/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./static/images/favicon.ico" media="screen"  />
+</head>
+
+<body>
+    <div id="title">通讯录</div>
+    <div id="add">添加</div>
+    
+    <form name="searchInf" id="search">
+        <input type="submit" value="Search" id="searchInf">
+        <input type="text" name="inf" placeholder="请输入查询信息">
+    </form>
+    
+    <ul id="container">
+        <li class="head">
+            <span title="name">姓名</span>
+            <span title="number">学号</span>
+            <span title="phone">手机号码</span>
+        </li>
+    </ul>
+
+    <div id="pages" align="center">
+        <input type="submit" name="pre" title="previous page" value="上一页" class="onePage">
+        <input type="submit" name="goTo" value="Go" id="goToPage">
+        <input type="text" name="page" class="enterPage">
+        <span>第<span id="pageNumber">{{ page }}</span>页，共<span id="totalNumber">{{ total }}</span>页</span>
+        <input type="submit" name="next" title="next page" value="下一页" class="onePage">
+    </div>
+
+    <form name="addInf" id="add-inf-form">
+        <div class="close"></div>
+        <input type="text" name="name" placeholder="姓名">
+        <input type="text" name="number" placeholder="学号">
+        <input type="text" name="phone" placeholder="手机">
+        <input type="submit" value="添加" id="submitInfo">
+    </form>
+
+
+    <script type="text/javascript" src="./static/index.js"></script>
+
+</body>
+
+</html>
