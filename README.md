@@ -7,7 +7,7 @@ dockerflie只完成了一部分的配置工作,需要在docker镜像建立起来
 https://hub.docker.com/r/wustardust/web-index/  
   
 运行镜像代码如下.  
-docker run -t -i -p 80:8012 -p 8080:8756 --name=web-index web-index:v4 /bin/bash  
+docker run -t -i -p 80:8012 -p 8080:8756 --name=web-index wustardust/web-index:latest /bin/bash  
 service mysql start  
 /etc/init.d/nginx start  
 uwsgi --ini /home/web-index/web/uwsgi.ini  
